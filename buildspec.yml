@@ -1,0 +1,7 @@
+phases:
+  install:
+    run-as: root
+    runtime-versions:
+      python: 3.7
+    commands:
+      - "pip install -r django/requirements.txt"
