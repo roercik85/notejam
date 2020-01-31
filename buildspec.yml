@@ -9,5 +9,6 @@ phases:
       python: 3.8
     commands:
       - "pip install -r django/requirements.txt"
-      # - "./django/notejam/manage.py syncdb"
+      - "pip install psycopg2"
+      - "./django/notejam/manage.py syncdb"
       - "./django/notejam/manage.py migrate"
