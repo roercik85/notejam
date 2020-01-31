@@ -15,7 +15,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'notejam-db',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': '12345678',
         'HOST': 'notejam-db.cpwbpmwoc2pg.us-east-2.rds.amazonaws.com',
