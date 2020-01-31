@@ -18,7 +18,7 @@ DATABASES = {
         'NAME': 'notejam-db',
         'USER': 'postgres',
         'PASSWORD': '12345678',
-        'HOST': 'localhost',
+        'HOST': 'notejam-db.cpwbpmwoc2pg.us-east-2.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
