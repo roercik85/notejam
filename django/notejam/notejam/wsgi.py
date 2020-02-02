@@ -15,9 +15,8 @@ framework.
 """
 import os
 import sys
-settings.py
 sys.path = [os.path.abspath(os.path.dirname(__file__))] + sys.path
-print (sys.path)
+print ("RGSYSPATH: " + sys.path)
 # import sys
 
 # myPath = os.path.dirname(os.path.realpath(__file__))
