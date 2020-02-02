@@ -14,6 +14,7 @@ framework.
 
 """
 import os
+import sys
 
 myPath = os.path.dirname(os.path.realpath(__file__))
 if myPath not in sys.path:
