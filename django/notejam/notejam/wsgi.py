@@ -15,7 +15,7 @@ framework.
 """
 import os
 import sys
-python settings.py
+settings.py
 sys.path = [os.path.abspath(os.path.dirname(__file__))] + sys.path
 print (sys.path)
 # import sys
