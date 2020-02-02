@@ -2,7 +2,7 @@ import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['notejam-env.gppchg5tpp.us-west-2.elasticbeanstalk.com']
 
 PROJECT_DIR = "{}/../".format(os.path.dirname(__file__))
 
