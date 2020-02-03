@@ -15,7 +15,7 @@ framework.
 """
 import os
 import sys
-sys.path = [os.path.abspath(os.path.dirname(__file__))] + sys.path
+# sys.path = [os.path.abspath(os.path.dirname(__file__))] + sys.path
 print (sys.path)
 # import sys
 
@@ -23,7 +23,7 @@ print (sys.path)
 # if myPath not in sys.path:
 #     sys.path.append(myPath)
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "notejam.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings")
 
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION
