@@ -6,8 +6,7 @@ phases:
   install:
     run-as: root
     runtime-versions:
-      python: 3.8
+      python: 2.7
     commands:
-      - "pip install -r django/requirements.txt"
-      # - "./django/notejam/manage.py syncdb"
-      # - "./django/notejam/manage.py migrate"
+      - "pip install -r flask/requirements.txt"
+      - "python flask/db.py"
