@@ -5,5 +5,3 @@ application.config.from_object(DevelopmentConfig)
 
 if __name__ == '__main__':
     application.run()
-
-# test-comment
