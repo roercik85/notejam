@@ -9,4 +9,4 @@ phases:
       python: 2.7
     commands:
       - "pip install -r flask/requirements.txt"
-      - "python flask/db.py"
+      # - "python flask/db.py"
