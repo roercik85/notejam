@@ -85,7 +85,7 @@ module "ecs_alb_service_task" {
 }
 
 module "ecs_codepipeline" {
-  source                  = "../../"
+  source                  = "git::https://github.com/cloudposse/terraform-aws-ecs-codepipeline.git?ref=master"
   namespace               = var.namespace
   stage                   = var.stage
   name                    = var.name
