@@ -106,5 +106,5 @@ module "ecs_codepipeline" {
   s3_bucket_force_destroy = var.s3_bucket_force_destroy
   environment_variables   = var.environment_variables
   ecs_cluster_name        = aws_ecs_cluster.default.name
-  # service_name            = module.ecs_alb_service_task.service_name
+  service_name            = "pserv"#module.ecs_alb_service_task.service_name
 }
