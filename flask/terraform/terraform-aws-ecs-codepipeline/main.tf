@@ -57,32 +57,32 @@ module "container_definition" {
   port_mappings                = var.container_port_mappings
 }
 
-module "ecs_alb_service_task" {
-  source                             = "git::https://github.com/cloudposse/terraform-aws-ecs-alb-service-task.git?ref=tags/0.17.0"
-  namespace                          = var.namespace
-  stage                              = var.stage
-  name                               = var.name
-  attributes                         = var.attributes
-  delimiter                          = var.delimiter
-  alb_security_group                 = module.vpc.vpc_default_security_group_id
-  container_definition_json          = module.container_definition.json
-  ecs_cluster_arn                    = aws_ecs_cluster.default.arn
-  launch_type                        = var.ecs_launch_type
-  vpc_id                             = module.vpc.vpc_id
-  security_group_ids                 = [module.vpc.vpc_default_security_group_id]
-  subnet_ids                         = module.subnets.public_subnet_ids
-  tags                               = var.tags
-  ignore_changes_task_definition     = var.ignore_changes_task_definition
-  network_mode                       = var.network_mode
-  assign_public_ip                   = var.assign_public_ip
-  propagate_tags                     = var.propagate_tags
-  deployment_minimum_healthy_percent = var.deployment_minimum_healthy_percent
-  deployment_maximum_percent         = var.deployment_maximum_percent
-  deployment_controller_type         = var.deployment_controller_type
-  desired_count                      = var.desired_count
-  task_memory                        = var.task_memory
-  task_cpu                           = var.task_cpu
-}
+# module "ecs_alb_service_task" {
+#   source                             = "git::https://github.com/cloudposse/terraform-aws-ecs-alb-service-task.git?ref=tags/0.17.0"
+#   namespace                          = var.namespace
+#   stage                              = var.stage
+#   name                               = var.name
+#   attributes                         = var.attributes
+#   delimiter                          = var.delimiter
+#   alb_security_group                 = module.vpc.vpc_default_security_group_id
+#   container_definition_json          = module.container_definition.json
+#   ecs_cluster_arn                    = aws_ecs_cluster.default.arn
+#   launch_type                        = var.ecs_launch_type
+#   vpc_id                             = module.vpc.vpc_id
+#   security_group_ids                 = [module.vpc.vpc_default_security_group_id]
+#   subnet_ids                         = module.subnets.public_subnet_ids
+#   tags                               = var.tags
+#   ignore_changes_task_definition     = var.ignore_changes_task_definition
+#   network_mode                       = var.network_mode
+#   assign_public_ip                   = var.assign_public_ip
+#   propagate_tags                     = var.propagate_tags
+#   deployment_minimum_healthy_percent = var.deployment_minimum_healthy_percent
+#   deployment_maximum_percent         = var.deployment_maximum_percent
+#   deployment_controller_type         = var.deployment_controller_type
+#   desired_count                      = var.desired_count
+#   task_memory                        = var.task_memory
+#   task_cpu                           = var.task_cpu
+# }
 
 module "ecs_codepipeline" {
   source                  = "git::https://github.com/cloudposse/terraform-aws-ecs-codepipeline.git?ref=master"
@@ -106,5 +106,5 @@ module "ecs_codepipeline" {
   s3_bucket_force_destroy = var.s3_bucket_force_destroy
   environment_variables   = var.environment_variables
   ecs_cluster_name        = aws_ecs_cluster.default.name
-  service_name            = module.ecs_alb_service_task.service_name
+  # service_name            = module.ecs_alb_service_task.service_name
 }
