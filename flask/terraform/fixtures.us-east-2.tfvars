@@ -80,6 +80,11 @@ additional_settings = [
     namespace = "aws:elasticbeanstalk:managedactions"
     name      = "ManagedActionsEnabled"
     value     = "false"
+  },
+  {
+    namespace = "aws:elasticbeanstalk:container:python"
+    name      = "WSGIPath"
+    value     = "notejam/wsgi.py"
   }
 ]
 
