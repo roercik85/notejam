@@ -41,7 +41,7 @@ module "elastic_beanstalk_application" {
 }
 
 module "elastic_beanstalk_environment" {
-  source                     = "git::https://github.com/cloudposse/terraform-aws-elastic-beanstalk-application.git?ref=tags/0.16.0"
+  source                     = "git::https://github.com/cloudposse/terraform-aws-elastic-beanstalk-application.git?ref=master"
   namespace                  = var.namespace
   stage                      = var.stage
   name                       = var.name
