@@ -78,15 +78,15 @@ container_port_mappings = [
   }
 ]
 
-github_oauth_token = "test"
+github_oauth_token = "381cbacb0327261141808da9220815d33ad6bb1c"
 
 github_webhooks_token = "test"
 
-repo_owner = "cloudposse"
+repo_owner = "roercik85"
 
-repo_name = "terraform-aws-ecs-codepipeline"
+repo_name = "notejam"
 
-branch = "master"
+branch = "rgradzki-demo"
 
 build_image = "aws/codebuild/docker:17.09.0"
 
@@ -94,7 +94,7 @@ build_compute_type = "BUILD_GENERAL1_SMALL"
 
 build_timeout = 60
 
-poll_source_changes = false
+poll_source_changes = true
 
 privileged_mode = true
 
